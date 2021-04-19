@@ -38,7 +38,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   } );
   
   app.get( "/filteredimage", async ( req:express.Request , res:express.Response ) => {
-    const imageURL = req.query.image_url
+    const imageURL: string = req.query.image_url
     if(!imageURL) {
       res.sendStatus(422)
     }
